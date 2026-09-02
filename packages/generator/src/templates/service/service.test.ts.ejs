@@ -1,0 +1,34 @@
+import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { <%- camelName %>Service } from './<%- camelName %>.service';
+
+const mockFetch = vi.fn();
+global.fetch = mockFetch;
+
+describe('<%- camelName %>Service', () => {
+  beforeEach(() => {
+    mockFetch.mockReset();
+  });
+
+  it('getAll fetches from the correct endpoint', async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      json: () => Promise.resolve([]),
+    });
+
+    const result = await <%- camelName %>Service.getAll();
+    expect(result).toEqual([]);
+    expect(mockFetch).toHaveBeenCalledWith(
+      expect.stringContaining('/<%- kebabName %>'),
+    );
+  });
+
+  it('getById fetches a single item', async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      json: () => Promise.resolve({ id: '1' }),
+    });
+
+    const result = await <%- camelName %>Service.getById('1');
+    expect(result).toEqual({ id: '1' });
+  });
+});

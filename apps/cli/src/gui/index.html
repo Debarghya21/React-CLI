@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>rcli GUI</title>
+</head>
+<body>
+  <h1>rcli GUI</h1>
+  <input id="projectName" placeholder="Project Name" />
+  <select id="pm">
+    <option value="npm">npm</option>
+    <option value="pnpm">pnpm</option>
+    <option value="yarn">yarn</option>
+  </select>
+  <button id="newBtn">New</button>
+  <div id="result"></div>
+  <script>
+    document.getElementById('newBtn').onclick = async () => {
+      const name = document.getElementById('projectName').value;
+      const pm = document.getElementById('pm').value;
+      const res = await fetch('/api/new-project', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, pm })
+      });
+      const data = await res.json();
+      document.getElementById('result').innerText = data.success ? 'Project created!' : data.error;
+    };
+  </script>
+</body>
+</html>

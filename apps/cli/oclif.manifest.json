@@ -1,0 +1,690 @@
+{
+  "commands": {
+    "build": {
+      "aliases": [],
+      "args": {},
+      "description": "Build the application for production (delegates to Vite)",
+      "examples": [
+        "<%= config.bin %> build"
+      ],
+      "flags": {},
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "build",
+      "pluginAlias": "rcli",
+      "pluginName": "rcli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false,
+      "isESM": true,
+      "relativePath": [
+        "dist",
+        "commands",
+        "build.js"
+      ]
+    },
+    "format": {
+      "aliases": [],
+      "args": {},
+      "description": "Format the project source code (delegates to Prettier)",
+      "examples": [
+        "<%= config.bin %> format",
+        "<%= config.bin %> format --check"
+      ],
+      "flags": {
+        "check": {
+          "description": "Check formatting without modifying files",
+          "name": "check",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "format",
+      "pluginAlias": "rcli",
+      "pluginName": "rcli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false,
+      "isESM": true,
+      "relativePath": [
+        "dist",
+        "commands",
+        "format.js"
+      ]
+    },
+    "gui": {
+      "aliases": [],
+      "args": {},
+      "description": "Open a GUI to create new projects",
+      "flags": {},
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "gui",
+      "pluginAlias": "rcli",
+      "pluginName": "rcli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false,
+      "isESM": true,
+      "relativePath": [
+        "dist",
+        "commands",
+        "gui.js"
+      ]
+    },
+    "info": {
+      "aliases": [],
+      "args": {},
+      "description": "Display information about the current rcli project and environment",
+      "examples": [
+        "<%= config.bin %> info"
+      ],
+      "flags": {},
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "info",
+      "pluginAlias": "rcli",
+      "pluginName": "rcli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false,
+      "isESM": true,
+      "relativePath": [
+        "dist",
+        "commands",
+        "info.js"
+      ]
+    },
+    "lint": {
+      "aliases": [],
+      "args": {},
+      "description": "Lint the project source code (delegates to ESLint)",
+      "examples": [
+        "<%= config.bin %> lint",
+        "<%= config.bin %> lint --fix"
+      ],
+      "flags": {
+        "fix": {
+          "description": "Automatically fix linting issues",
+          "name": "fix",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "lint",
+      "pluginAlias": "rcli",
+      "pluginName": "rcli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false,
+      "isESM": true,
+      "relativePath": [
+        "dist",
+        "commands",
+        "lint.js"
+      ]
+    },
+    "new": {
+      "aliases": [],
+      "args": {
+        "name": {
+          "description": "Name of the new project",
+          "name": "name",
+          "required": true
+        }
+      },
+      "description": "Create a new React application with rcli configuration",
+      "examples": [
+        "<%= config.bin %> new my-app",
+        "<%= config.bin %> new ecommerce",
+        "<%= config.bin %> new my-app --pm pnpm"
+      ],
+      "flags": {
+        "pm": {
+          "description": "Package manager to use",
+          "name": "pm",
+          "default": "npm",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "options": [
+            "npm",
+            "pnpm",
+            "yarn"
+          ],
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "new",
+      "pluginAlias": "rcli",
+      "pluginName": "rcli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false,
+      "isESM": true,
+      "relativePath": [
+        "dist",
+        "commands",
+        "new.js"
+      ]
+    },
+    "serve": {
+      "aliases": [],
+      "args": {},
+      "description": "Start the development server (delegates to Vite)",
+      "examples": [
+        "<%= config.bin %> serve",
+        "<%= config.bin %> serve --port 3000"
+      ],
+      "flags": {
+        "port": {
+          "char": "p",
+          "description": "Port for the dev server",
+          "name": "port",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "serve",
+      "pluginAlias": "rcli",
+      "pluginName": "rcli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false,
+      "isESM": true,
+      "relativePath": [
+        "dist",
+        "commands",
+        "serve.js"
+      ]
+    },
+    "test": {
+      "aliases": [],
+      "args": {},
+      "description": "Run tests (delegates to Vitest)",
+      "examples": [
+        "<%= config.bin %> test",
+        "<%= config.bin %> test --watch"
+      ],
+      "flags": {
+        "watch": {
+          "char": "w",
+          "description": "Run tests in watch mode",
+          "name": "watch",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "test",
+      "pluginAlias": "rcli",
+      "pluginName": "rcli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false,
+      "isESM": true,
+      "relativePath": [
+        "dist",
+        "commands",
+        "test.js"
+      ]
+    },
+    "version": {
+      "aliases": [],
+      "args": {},
+      "description": "Display the current rcli version",
+      "examples": [
+        "<%= config.bin %> version"
+      ],
+      "flags": {
+        "json": {
+          "description": "Output version info as JSON",
+          "name": "json",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "version",
+      "pluginAlias": "rcli",
+      "pluginName": "rcli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false,
+      "isESM": true,
+      "relativePath": [
+        "dist",
+        "commands",
+        "version.js"
+      ]
+    },
+    "generate:component": {
+      "aliases": [
+        "g:component"
+      ],
+      "args": {
+        "name": {
+          "description": "Name of the component",
+          "name": "name",
+          "required": true
+        }
+      },
+      "description": "Generate a new React component",
+      "examples": [
+        "<%= config.bin %> generate component UserCard",
+        "<%= config.bin %> generate component Button --no-test",
+        "<%= config.bin %> generate component Button --directory src/ui",
+        "<%= config.bin %> generate component Button --dry-run"
+      ],
+      "flags": {
+        "test": {
+          "description": "Generate a test file (default: from rcli.json)",
+          "name": "test",
+          "allowNo": true,
+          "type": "boolean"
+        },
+        "directory": {
+          "char": "d",
+          "description": "Override the output directory",
+          "name": "directory",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "force": {
+          "char": "f",
+          "description": "Overwrite existing files",
+          "name": "force",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "dry-run": {
+          "description": "Show what would be generated without writing files",
+          "name": "dry-run",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "skip-export": {
+          "description": "Skip updating barrel export files",
+          "name": "skip-export",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "generate:component",
+      "pluginAlias": "rcli",
+      "pluginName": "rcli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false,
+      "isESM": true,
+      "relativePath": [
+        "dist",
+        "commands",
+        "generate",
+        "component.js"
+      ]
+    },
+    "generate:context": {
+      "aliases": [
+        "g:context"
+      ],
+      "args": {
+        "name": {
+          "description": "Name of the context",
+          "name": "name",
+          "required": true
+        }
+      },
+      "description": "Generate a new React context",
+      "examples": [
+        "<%= config.bin %> generate context Auth",
+        "<%= config.bin %> generate context Theme --dry-run"
+      ],
+      "flags": {
+        "directory": {
+          "char": "d",
+          "description": "Override the output directory",
+          "name": "directory",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "force": {
+          "char": "f",
+          "description": "Overwrite existing files",
+          "name": "force",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "dry-run": {
+          "description": "Show what would be generated without writing files",
+          "name": "dry-run",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "generate:context",
+      "pluginAlias": "rcli",
+      "pluginName": "rcli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false,
+      "isESM": true,
+      "relativePath": [
+        "dist",
+        "commands",
+        "generate",
+        "context.js"
+      ]
+    },
+    "generate:hook": {
+      "aliases": [
+        "g:hook"
+      ],
+      "args": {
+        "name": {
+          "description": "Name of the hook",
+          "name": "name",
+          "required": true
+        }
+      },
+      "description": "Generate a new React hook",
+      "examples": [
+        "<%= config.bin %> generate hook useAuth",
+        "<%= config.bin %> generate hook usePosts --no-test"
+      ],
+      "flags": {
+        "test": {
+          "description": "Generate a test file",
+          "name": "test",
+          "allowNo": true,
+          "type": "boolean"
+        },
+        "directory": {
+          "char": "d",
+          "description": "Override the output directory",
+          "name": "directory",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "force": {
+          "char": "f",
+          "description": "Overwrite existing files",
+          "name": "force",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "dry-run": {
+          "description": "Show what would be generated without writing files",
+          "name": "dry-run",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "generate:hook",
+      "pluginAlias": "rcli",
+      "pluginName": "rcli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false,
+      "isESM": true,
+      "relativePath": [
+        "dist",
+        "commands",
+        "generate",
+        "hook.js"
+      ]
+    },
+    "generate:layout": {
+      "aliases": [
+        "g:layout"
+      ],
+      "args": {
+        "name": {
+          "description": "Name of the layout",
+          "name": "name",
+          "required": true
+        }
+      },
+      "description": "Generate a new layout component",
+      "examples": [
+        "<%= config.bin %> generate layout DashboardLayout",
+        "<%= config.bin %> generate layout MainLayout --dry-run"
+      ],
+      "flags": {
+        "directory": {
+          "char": "d",
+          "description": "Override the output directory",
+          "name": "directory",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "force": {
+          "char": "f",
+          "description": "Overwrite existing files",
+          "name": "force",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "dry-run": {
+          "description": "Show what would be generated without writing files",
+          "name": "dry-run",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "generate:layout",
+      "pluginAlias": "rcli",
+      "pluginName": "rcli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false,
+      "isESM": true,
+      "relativePath": [
+        "dist",
+        "commands",
+        "generate",
+        "layout.js"
+      ]
+    },
+    "generate:page": {
+      "aliases": [
+        "g:page"
+      ],
+      "args": {
+        "name": {
+          "description": "Name of the page",
+          "name": "name",
+          "required": true
+        }
+      },
+      "description": "Generate a new page component",
+      "examples": [
+        "<%= config.bin %> generate page Dashboard",
+        "<%= config.bin %> generate page Settings --dry-run"
+      ],
+      "flags": {
+        "test": {
+          "description": "Generate a test file",
+          "name": "test",
+          "allowNo": true,
+          "type": "boolean"
+        },
+        "directory": {
+          "char": "d",
+          "description": "Override the output directory",
+          "name": "directory",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "force": {
+          "char": "f",
+          "description": "Overwrite existing files",
+          "name": "force",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "dry-run": {
+          "description": "Show what would be generated without writing files",
+          "name": "dry-run",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "generate:page",
+      "pluginAlias": "rcli",
+      "pluginName": "rcli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false,
+      "isESM": true,
+      "relativePath": [
+        "dist",
+        "commands",
+        "generate",
+        "page.js"
+      ]
+    },
+    "generate:service": {
+      "aliases": [
+        "g:service"
+      ],
+      "args": {
+        "name": {
+          "description": "Name of the service",
+          "name": "name",
+          "required": true
+        }
+      },
+      "description": "Generate a new service module",
+      "examples": [
+        "<%= config.bin %> generate service auth",
+        "<%= config.bin %> generate service user --dry-run"
+      ],
+      "flags": {
+        "test": {
+          "description": "Generate a test file",
+          "name": "test",
+          "allowNo": true,
+          "type": "boolean"
+        },
+        "directory": {
+          "char": "d",
+          "description": "Override the output directory",
+          "name": "directory",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "force": {
+          "char": "f",
+          "description": "Overwrite existing files",
+          "name": "force",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "dry-run": {
+          "description": "Show what would be generated without writing files",
+          "name": "dry-run",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "generate:service",
+      "pluginAlias": "rcli",
+      "pluginName": "rcli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false,
+      "isESM": true,
+      "relativePath": [
+        "dist",
+        "commands",
+        "generate",
+        "service.js"
+      ]
+    },
+    "generate:type": {
+      "aliases": [
+        "g:type"
+      ],
+      "args": {
+        "name": {
+          "description": "Name of the type",
+          "name": "name",
+          "required": true
+        }
+      },
+      "description": "Generate a new TypeScript type definition file",
+      "examples": [
+        "<%= config.bin %> generate type User",
+        "<%= config.bin %> generate type ApiResponse --dry-run"
+      ],
+      "flags": {
+        "directory": {
+          "char": "d",
+          "description": "Override the output directory",
+          "name": "directory",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "force": {
+          "char": "f",
+          "description": "Overwrite existing files",
+          "name": "force",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "dry-run": {
+          "description": "Show what would be generated without writing files",
+          "name": "dry-run",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "generate:type",
+      "pluginAlias": "rcli",
+      "pluginName": "rcli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false,
+      "isESM": true,
+      "relativePath": [
+        "dist",
+        "commands",
+        "generate",
+        "type.js"
+      ]
+    }
+  },
+  "version": "0.1.0"
+}

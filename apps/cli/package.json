@@ -1,0 +1,52 @@
+{
+  "name": "rcli",
+  "version": "0.1.0",
+  "description": "React CLI — A Developer CLI for React Applications",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "mycli": "./bin/run.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "oclif.manifest.json"
+  ],
+  "scripts": {
+    "build": "tsc -b && rm -rf dist/gui && cp -r src/gui dist/gui",
+    "dev": "tsc -b --watch",
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "postbuild": "oclif manifest"
+  },
+  "dependencies": {
+    "@oclif/core": "^4.14.0",
+    "@rcli/config": "workspace:*",
+    "@rcli/core": "workspace:*",
+    "@rcli/filesystem": "workspace:*",
+    "@rcli/generator": "workspace:*",
+    "@rcli/process-runner": "workspace:*",
+    "@rcli/utils": "workspace:*",
+    "body-parser": "^2.3.0",
+    "express": "^5.2.1",
+    "open": "^11.0.2"
+  },
+  "oclif": {
+    "bin": "mycli",
+    "dirname": "mycli",
+    "commands": {
+      "strategy": "pattern",
+      "target": "./dist/commands"
+    },
+    "topicSeparator": " ",
+    "topics": {
+      "generate": {
+        "description": "Generate components, pages, hooks, services and more"
+      }
+    }
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "oclif": "^4.24.0"
+  }
+}

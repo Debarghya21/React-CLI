@@ -1,0 +1,12 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/utils" },
+    { "path": "packages/config" },
+    { "path": "packages/filesystem" },
+    { "path": "packages/process-runner" },
+    { "path": "packages/core" },
+    { "path": "packages/generator" },
+    { "path": "apps/cli" }
+  ]
+}

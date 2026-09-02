@@ -1,0 +1,31 @@
+{
+  "name": "@rcli/generator",
+  "version": "0.1.0",
+  "description": "Generator engine for React CLI — template-based code generation",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsc -b --watch",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "dependencies": {
+    "@rcli/config": "workspace:*",
+    "@rcli/core": "workspace:*",
+    "@rcli/filesystem": "workspace:*",
+    "@rcli/process-runner": "workspace:*",
+    "@rcli/utils": "workspace:*",
+    "ejs": "^3.1.10"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/ejs": "^3.1.5"
+  }
+}

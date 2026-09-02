@@ -1,0 +1,29 @@
+import { createContext, useContext, useState, type ReactNode } from 'react';
+
+interface <%- pascalName %>ContextValue {
+  // Add your context values here
+  state: unknown;
+  setState: (value: unknown) => void;
+}
+
+const <%- pascalName %>Context = createContext<<%- pascalName %>ContextValue | undefined>(
+  undefined,
+);
+
+export function <%- pascalName %>Provider({ children }: { children: ReactNode }) {
+  const [state, setState] = useState<unknown>(null);
+
+  return (
+    <<%- pascalName %>Context.Provider value={{ state, setState }}>
+      {children}
+    </<%- pascalName %>Context.Provider>
+  );
+}
+
+export function use<%- pascalName %>(): <%- pascalName %>ContextValue {
+  const context = useContext(<%- pascalName %>Context);
+  if (context === undefined) {
+    throw new Error('use<%- pascalName %> must be used within a <%- pascalName %>Provider');
+  }
+  return context;
+}

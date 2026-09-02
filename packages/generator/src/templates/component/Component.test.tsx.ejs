@@ -1,0 +1,14 @@
+import { describe, it, expect } from 'vitest';
+import { render, screen } from '@testing-library/react';
+import { <%- pascalName %> } from './<%- pascalName %>';
+
+describe('<%- pascalName %>', () => {
+  it('renders without crashing', () => {
+    render(<<%- pascalName %> />);
+  });
+
+  it('renders children', () => {
+    render(<<%- pascalName %>>Hello</<%- pascalName %>>);
+    expect(screen.getByText('Hello')).toBeDefined();
+  });
+});

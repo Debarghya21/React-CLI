@@ -1,0 +1,42 @@
+const API_BASE_URL = import.meta.env.VITE_API_URL ?? '/api';
+
+export const <%- camelName %>Service = {
+  async getAll(): Promise<unknown[]> {
+    const response = await fetch(`${API_BASE_URL}/<%- kebabName %>`);
+    if (!response.ok) throw new Error(`Failed to fetch <%- kebabName %>`);
+    return response.json();
+  },
+
+  async getById(id: string): Promise<unknown> {
+    const response = await fetch(`${API_BASE_URL}/<%- kebabName %>/${id}`);
+    if (!response.ok) throw new Error(`Failed to fetch <%- kebabName %> ${id}`);
+    return response.json();
+  },
+
+  async create(data: Record<string, unknown>): Promise<unknown> {
+    const response = await fetch(`${API_BASE_URL}/<%- kebabName %>`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!response.ok) throw new Error(`Failed to create <%- kebabName %>`);
+    return response.json();
+  },
+
+  async update(id: string, data: Record<string, unknown>): Promise<unknown> {
+    const response = await fetch(`${API_BASE_URL}/<%- kebabName %>/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!response.ok) throw new Error(`Failed to update <%- kebabName %> ${id}`);
+    return response.json();
+  },
+
+  async remove(id: string): Promise<void> {
+    const response = await fetch(`${API_BASE_URL}/<%- kebabName %>/${id}`, {
+      method: 'DELETE',
+    });
+    if (!response.ok) throw new Error(`Failed to delete <%- kebabName %> ${id}`);
+  },
+};
