@@ -1,0 +1,22 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import { <%- pascalName %> } from './<%- pascalName %>';
+
+const meta: Meta<typeof <%- pascalName %>> = {
+  title: '<%- pascalName %>',
+  component: <%- pascalName %>,
+  tags: ['autodocs'],
+  argTypes: {},
+};
+
+export default meta;
+type Story = StoryObj<typeof <%- pascalName %>>;
+
+export const Default: Story = {
+  args: {},
+};
+
+export const WithChildren: Story = {
+  args: {
+    children: 'Hello from <%- pascalName %>',
+  },
+};

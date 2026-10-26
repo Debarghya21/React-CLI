@@ -57,7 +57,7 @@
     "gui": {
       "aliases": [],
       "args": {},
-      "description": "Open a GUI to create new projects",
+      "description": "Launch the visual Developer Control Center for your React project",
       "flags": {},
       "hasDynamicHelp": false,
       "hiddenAliases": [],

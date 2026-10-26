@@ -6,6 +6,7 @@ import { ServiceGenerator } from './generators/service.generator.js';
 import { ContextGenerator } from './generators/context.generator.js';
 import { LayoutGenerator } from './generators/layout.generator.js';
 import { TypeGenerator } from './generators/type.generator.js';
+import { StorybookGenerator } from './generators/storybook.generator.js';
 
 /**
  * Generator Registry — resolves generator type names to generator instances.
@@ -20,6 +21,7 @@ generators.set('service', new ServiceGenerator());
 generators.set('context', new ContextGenerator());
 generators.set('layout', new LayoutGenerator());
 generators.set('type', new TypeGenerator());
+generators.set('storybook', new StorybookGenerator());
 
 /**
  * Resolves a generator by its type name.

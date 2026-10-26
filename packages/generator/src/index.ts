@@ -24,4 +24,5 @@ export { ServiceGenerator } from './generators/service.generator.js';
 export { ContextGenerator } from './generators/context.generator.js';
 export { LayoutGenerator } from './generators/layout.generator.js';
 export { TypeGenerator } from './generators/type.generator.js';
+export { StorybookGenerator } from './generators/storybook.generator.js';
 
