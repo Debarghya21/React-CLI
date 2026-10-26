@@ -7,7 +7,7 @@ import { fork } from 'child_process';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default class GuiCommand extends Command {
-  static override description = 'Open a GUI to create new projects';
+  static override description = 'Launch the visual Developer Control Center for your React project';
 
   async run(): Promise<void> {
     // Start the Express server in a child process

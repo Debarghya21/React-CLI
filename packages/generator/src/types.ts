@@ -66,4 +66,5 @@ export type GeneratorType =
   | 'service'
   | 'context'
   | 'layout'
-  | 'type';
+  | 'type'
+  | 'storybook';
