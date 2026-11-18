@@ -148,6 +148,13 @@ export async function createProject(options: ProjectOptions): Promise<string> {
       path.join(projectDir, 'src/vite-env.d.ts'),
       '/// <reference types="vite/client" />\n',
     );
+
+    // .npmrc — use public registry regardless of any global override
+    createFile(
+      path.join(projectDir, '.npmrc'),
+      'registry=https://registry.npmjs.org/\n',
+    );
+    
   }, 'Tools configured');
 
   // 7. Install dependencies
