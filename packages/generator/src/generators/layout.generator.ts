@@ -20,7 +20,7 @@ export class LayoutGenerator implements Generator {
     });
 
     // Barrel index
-    if (index) {
+    if (index && !skipExport) {
       files.push({
         path: path.join(layoutDir, 'index.ts'),
         content: renderTemplate('layout/index.ts.ejs', data),
