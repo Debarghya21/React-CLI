@@ -28,7 +28,7 @@ export class PageGenerator implements Generator {
     }
 
     // Barrel index
-    if (index) {
+    if (index && !skipExport) {
       files.push({
         path: path.join(pageDir, 'index.ts'),
         content: renderTemplate('page/index.ts.ejs', data),
