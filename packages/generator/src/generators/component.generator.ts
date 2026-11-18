@@ -28,7 +28,7 @@ export class ComponentGenerator implements Generator {
     }
 
     // Barrel index
-    if (index) {
+    if (index && !skipExport) {
       files.push({
         path: path.join(componentDir, 'index.ts'),
         content: renderTemplate('component/index.ts.ejs', data),
