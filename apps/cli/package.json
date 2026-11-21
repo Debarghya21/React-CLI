@@ -11,7 +11,10 @@
   "files": [
     "bin",
     "dist",
-    "oclif.manifest.json"
+    "oclif.manifest.json",
+    "../../THIRD-PARTY-NOTICES.txt",
+    "../../LICENSE",
+    "../../NOTICE"
   ],
   "scripts": {
     "build": "tsc -b && rm -rf dist/gui && cp -r src/gui dist/gui",

@@ -150,4 +150,23 @@ rcli/
 
 ## License
 
-MIT
+This project is licensed under the **MIT License**. See [`LICENSE`](./LICENSE) file for details.
+
+### Third-Party Licenses
+
+This project includes several open-source libraries. Full attribution and license information for all third-party dependencies can be found in:
+
+- **[`THIRD-PARTY-NOTICES.txt`](./THIRD-PARTY-NOTICES.txt)** - Complete copyright notices and MIT license texts
+- **[`THIRD_PARTY_LICENSES.md`](./THIRD_PARTY_LICENSES.md)** - Detailed dependency information with maintainers
+- **[`NOTICE`](./NOTICE)** - Apache 2.0 package attributions (ejs, TypeScript)
+
+**Key Dependencies:**
+- **@oclif/core** - CLI framework (MIT) © Jeff Dickey and contributors
+- **express** - Web server (MIT) © TJ Holowaychuk and Express.js contributors
+- **chalk** - Terminal styling (MIT) © Sindre Sorhus
+- **ws** - WebSocket implementation (MIT) © Einar Otto Stangvik
+- **ejs** - Templating engine (Apache 2.0) © Matthew Eernisse
+- **open** - Open URLs in browser (MIT) © Sindre Sorhus
+- **ora** - Terminal spinners (MIT) © Sindre Sorhus
+
+All licenses are compatible with MIT and permit commercial use.

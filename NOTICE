@@ -1,0 +1,189 @@
+# NOTICE
+
+## React CLI (rcli) - Third-Party Notices
+
+This software includes code from the following projects which are distributed under the Apache License 2.0:
+
+---
+
+## Apache License 2.0 Packages
+
+### 1. ejs
+
+**Project:** EJS - Embedded JavaScript templating
+**Homepage:** https://ejs.co/
+**Repository:** https://github.com/mde/ejs
+**Version:** 3.1.10
+**License:** Apache License 2.0
+**Copyright:** Copyright (c) 2014 Matthew Eernisse <mde@fleegix.org>
+
+**Usage in React CLI:**
+- Used for template-based code generation
+- Generates components, pages, hooks, services, layouts, and type definitions
+- Located in: `packages/generator/src/templates/`
+
+**Description:**
+EJS is a simple templating language that lets you generate HTML markup with JavaScript. This software includes the ejs package unmodified.
+
+**License Text:**
+For the full text of the Apache License 2.0, see:
+- https://www.apache.org/licenses/LICENSE-2.0
+- Or the file APACHE_LICENSE_2.0 (if included with this distribution)
+
+---
+
+### 2. TypeScript (Development-Only)
+
+**Project:** TypeScript - A superset of JavaScript
+**Homepage:** https://www.typescriptlang.org/
+**Repository:** https://github.com/microsoft/TypeScript
+**Version:** 7.0.2
+**License:** Apache License 2.0
+**Copyright:** Copyright (c) Microsoft Corporation. All rights reserved.
+
+**Usage in React CLI:**
+- Used as a development-only dependency for compilation
+- NOT included in distributed/production code
+- Compiles TypeScript source files to JavaScript
+
+**Development-Only Status:**
+TypeScript is listed as a `devDependency` and is not included in published npm packages or runtime distributions. Therefore, its Apache License 2.0 does not affect the distribution license of React CLI.
+
+**License Text:**
+For the full text of the Apache License 2.0, see:
+- https://www.apache.org/licenses/LICENSE-2.0
+
+---
+
+## Apache License 2.0 Summary
+
+The Apache License 2.0 is a permissive open source license compatible with MIT.
+
+**Key Points:**
+- ✅ Allows commercial use
+- ✅ Allows modification
+- ✅ Allows distribution
+- ✅ Includes patent grant
+- ⚠️ Requires license notice
+- ⚠️ Requires notice of modifications (if modified)
+- ⚠️ Requires acknowledgment of copyright holders
+
+**Compatibility with MIT:**
+The Apache 2.0 licensed code (ejs) can be freely distributed with MIT-licensed code (React CLI). When combined:
+- Include the MIT license for the overall project
+- Acknowledge Apache 2.0 licensed components (this file)
+- No additional restrictions apply
+
+---
+
+## How to Apply Apache License 2.0
+
+If you modify the ejs package (which is not the case for React CLI), you would need to:
+
+1. **Provide License Notice**
+   - Include a copy of the Apache License 2.0 text
+   - Include a notice that modifications were made
+
+2. **Mark Changes**
+   - Add a header comment noting changes made
+   - Example:
+   ```javascript
+   // MODIFIED: Added feature X for React CLI
+   // Original code from ejs@3.1.10 (Apache License 2.0)
+   ```
+
+3. **Preserve Copyright**
+   - Keep original copyright notice intact
+   - Add notice of modifications
+
+**Current Status:** ✅ ejs is used unmodified, so no additional action required.
+
+---
+
+## Recommendations
+
+### For Developers
+
+If you plan to:
+- **Modify ejs source:** You must follow Apache 2.0 requirements (marking changes, etc.)
+- **Distribute React CLI:** Include this NOTICE file
+- **Publish to npm:** This NOTICE is automatically included
+
+### For End Users
+
+When using React CLI:
+- ✅ You can use it commercially
+- ✅ You can modify it
+- ✅ You can distribute it
+- ✅ No copyleft restrictions apply
+
+### For Contributors
+
+If you contribute to React CLI:
+- Contributions are licensed under MIT (React CLI's license)
+- Respect Apache 2.0 obligations for ejs and TypeScript
+- Don't introduce GPL/AGPL dependencies without approval
+
+---
+
+## No Modifications Made
+
+This statement confirms that the Apache License 2.0 licensed packages included in React CLI (ejs, TypeScript) are used **unmodified** in their original forms.
+
+```
+ejs@3.1.10 - ✅ UNMODIFIED
+TypeScript@7.0.2 - ✅ UNMODIFIED (dev-only)
+```
+
+No changes have been made to their source code by the React CLI project.
+
+---
+
+## Attribution
+
+**React CLI (rcli)**
+- License: MIT
+- Copyright: © 2026 Debarghya21
+- Repository: https://github.com/Debarghya21/React-CLI
+
+**EJS (embedded JavaScript)**
+- License: Apache License 2.0
+- Copyright: © 2014 Matthew Eernisse
+- Repository: https://github.com/mde/ejs
+
+**TypeScript**
+- License: Apache License 2.0
+- Copyright: © Microsoft Corporation
+- Repository: https://github.com/microsoft/TypeScript
+
+---
+
+## Contact
+
+For questions about licensing in React CLI:
+- Check the main LICENSE file (MIT)
+- See THIRD_PARTY_LICENSES.md for complete dependency list
+- Visit https://opensource.org/licenses/ for license information
+
+---
+
+## Version Information
+
+- **Date Generated:** November 14, 2026
+- **React CLI Version:** 0.1.0
+- **Status:** Apache License 2.0 compliant ✅
+
+---
+
+## Additional Resources
+
+- **Apache License 2.0 Full Text:** https://www.apache.org/licenses/LICENSE-2.0
+- **MIT License Full Text:** https://opensource.org/licenses/MIT
+- **SPDX License Identifiers:** https://spdx.org/licenses/
+- **Open Source Initiative:** https://opensource.org/
+
+---
+
+**This NOTICE file is provided to ensure transparency and compliance with open source licensing requirements.**
+
+Dated: November 14, 2026
